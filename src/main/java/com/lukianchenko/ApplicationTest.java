@@ -21,14 +21,14 @@ public class ApplicationTest {
     String two = "wer";
 
     public static void main(String[] args) throws ExecutionException, InterruptedException, IOException {
-        InputStream serviceAccount = new FileInputStream("C:\\GCPfirestore\\FirestoreTest2-103474bfee56.json");
-        GoogleCredentials credentials = GoogleCredentials.fromStream(serviceAccount);
+//        InputStream serviceAccount = new FileInputStream("C:\\GCPfirestore\\FirestoreTest2-103474bfee56.json");
+//        GoogleCredentials credentials = GoogleCredentials.fromStream(serviceAccount);
         FirestoreOptions firestoreOptions = FirestoreOptions.newBuilder()
-                .setCredentials(credentials)
+//                .setCredentials(credentials)
                 .build();
         Firestore db = firestoreOptions.getService();
 
-        DocumentReference docRef = db.collection("users").document("alovelace2");
+        DocumentReference docRef = db.collection("users").document("appEngine");
 //         Add document data  with id "alovelace" using a hashmap
         Map<String, Object> data = new HashMap<>();
         data.put("first", "Ada");
