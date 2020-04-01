@@ -28,7 +28,7 @@ public class ApplicationTest {
                 .build();
         Firestore db = firestoreOptions.getService();
 
-        DocumentReference docRef = db.collection("users").document("appEngine");
+        DocumentReference docRef = db.collection("users").document("appEngine2");
 //         Add document data  with id "alovelace" using a hashmap
         Map<String, Object> data = new HashMap<>();
         data.put("first", "Ada");
