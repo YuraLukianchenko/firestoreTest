@@ -30,6 +30,8 @@
             <groupId>com.google.cloud</groupId>
             <artifactId>google-cloud-firestore</artifactId>
         </dependency>
+
+
     </dependencies>
 
     <build>
@@ -49,6 +51,7 @@
                     </archive>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 </project>
