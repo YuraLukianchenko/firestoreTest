@@ -23,7 +23,10 @@ public class ApplicationTest {
     public static void main(String[] args) throws ExecutionException, InterruptedException, IOException {
 //        InputStream serviceAccount = new FileInputStream("C:\\GCPfirestore\\FirestoreTest2-103474bfee56.json");
 //        GoogleCredentials credentials = GoogleCredentials.fromStream(serviceAccount);
+//        FirestoreOptions firestoreOptions = FirestoreOptions.newBuilder()
         FirestoreOptions firestoreOptions = FirestoreOptions.newBuilder()
+                .setProjectId("firestoretest2-272106")
+
 //                .setCredentials(credentials)
                 .build();
         Firestore db = firestoreOptions.getService();
