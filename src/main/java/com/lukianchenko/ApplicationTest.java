@@ -24,12 +24,13 @@ public class ApplicationTest {
 //        InputStream serviceAccount = new FileInputStream("C:\\GCPfirestore\\FirestoreTest2-103474bfee56.json");
 //        GoogleCredentials credentials = GoogleCredentials.fromStream(serviceAccount);
 //        FirestoreOptions firestoreOptions = FirestoreOptions.newBuilder()
-        FirestoreOptions firestoreOptions = FirestoreOptions.newBuilder()
-                .setProjectId("firestoretest2-272106")
+//        FirestoreOptions firestoreOptions = FirestoreOptions.newBuilder()
+//                .setProjectId("firestoretest2-272106")
 
 //                .setCredentials(credentials)
-                .build();
-        Firestore db = firestoreOptions.getService();
+//                .build();
+//        Firestore db = firestoreOptions.getService();
+        Firestore db = FirestoreOptions.getDefaultInstance().getService();
 
         DocumentReference docRef = db.collection("users").document("appEngine2");
 //         Add document data  with id "alovelace" using a hashmap
