@@ -3,6 +3,8 @@ package com.lukianchenko;
 import com.google.api.core.ApiFuture;
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.cloud.firestore.*;
+import com.google.cloud.firestore.Firestore;
+import com.google.cloud.firestore.FirestoreOptions;
 
 
 import java.io.FileInputStream;
@@ -30,7 +32,13 @@ public class ApplicationTest {
 //                .setCredentials(credentials)
 //                .build();
 //        Firestore db = firestoreOptions.getService();
-        Firestore db = FirestoreOptions.getDefaultInstance().getService();
+//        Firestore db = FirestoreOptions.getDefaultInstance().getService();
+
+        FirestoreOptions firestoreOptions =
+                FirestoreOptions.getDefaultInstance().toBuilder()
+                        .setProjectId("firestoretest2-272106")
+                        .build();
+        Firestore db = firestoreOptions.getService();
 
         DocumentReference docRef = db.collection("users").document("appEngine2");
 //         Add document data  with id "alovelace" using a hashmap
